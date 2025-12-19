@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./styles.css";
 
 interface TemporizadorLeilaoProps {
   segundos: number;
@@ -22,13 +23,7 @@ export function TemporizadorLeilao({ segundos, aoEncerrar }: TemporizadorLeilaoP
   }, [tempo, aoEncerrar]);
 
   return (
-    <span
-      style={{
-        fontWeight: "bold",
-        color: tempo > 0 ? "#008000" : "#c00000",
-        fontSize: 16,
-      }}
-    >
+    <span className={`formato ${tempo > 0 ? "colorAtivo" : "colorEncerrado"}`} >
       {tempo > 0 ? formatarTempo(tempo) : "Encerrado"}
     </span>
   );

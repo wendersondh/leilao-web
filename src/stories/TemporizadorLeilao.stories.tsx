@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { TemporizadorLeilao } from "../components/TemporizadorLeilao";
+import { TemporizadorLeilao } from "../components/TemporizadorLeilao/TemporizadorLeilao";
 
 const meta: Meta<typeof TemporizadorLeilao> = {
   title: "Leilao/TemporizadorLeilao",

@@ -1,6 +1,7 @@
-import { produtosMock } from "../data/leiloesMock";
-import type { Produto } from "../types/Produto";
-import { CardProduto } from "./CardProduto";
+import { produtosMock } from "../../data/leiloesMock";
+import type { Produto } from "../../types/Produto";
+import { CardProduto } from "../CardProduto/CardProduto";
+import "./styles.css";
 
 interface ListaDeProdutosProps {
   filtro?: string;
@@ -12,16 +13,10 @@ export function ListaDeProdutos({ filtro = "" }: ListaDeProdutosProps) {
   );
 
   return (
-    <div style={{ maxWidth: 1100, margin: "20px auto" }}>
+    <div className="ListaDeProdutos">
       <h2>Leilões Ativos</h2>
 
-      <div
-        style={{
-          display: "flex",
-          gap: 20,
-          flexWrap: "wrap",
-        }}
-      >
+      <div className="Cards" >
         {listaFiltrada.map((produto) => (
           <CardProduto key={produto.id} produto={produto} />
         ))}

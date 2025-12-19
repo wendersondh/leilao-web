@@ -1,0 +1,11 @@
+
+.ListaDeProdutos {
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.Cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BarraDeBusca } from "../components/BarraDeBusca/BarraDeBusca";
-import { ListaDeProdutos } from "../components/ListaDeProdutos";
+import { ListaDeProdutos } from "../components/ListaDeProdutos/ListaDeProdutos";
 
 export function Home() {
   const [filtro, setFiltro] = useState("");

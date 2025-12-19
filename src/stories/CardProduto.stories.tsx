@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CardProduto } from "../components/CardProduto";
+import { CardProduto } from "../components/CardProduto/CardProduto";
 import type { Produto } from "../types/Produto";
 
 const produtoMock: Produto = {
@@ -18,6 +18,18 @@ const produtoMock: Produto = {
 const meta: Meta<typeof CardProduto> = {
   title: "Leilao/CardProduto",
   component: CardProduto,
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          padding: 40,
+          maxWidth: 300,
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default meta;
